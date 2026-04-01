@@ -1,0 +1,102 @@
+-- =============================================
+-- Modelo do Banco de Dados - IMOBITEC
+-- Estrutura completa (apenas DDL - sem dados)
+-- Data: Abril/2026
+-- =============================================
+
+CREATE DATABASE IF NOT EXISTS `imobitec`
+    DEFAULT CHARACTER SET utf8mb4 
+    COLLATE utf8mb4_0900_ai_ci;
+
+USE `imobitec`;
+
+-- =============================================
+-- Tabela: imobiliarias
+-- =============================================
+CREATE TABLE `imobiliarias` (
+  `ID_IMOBILIARIA` int NOT NULL AUTO_INCREMENT,
+  `NM_IMOBILIARIA` varchar(100) DEFAULT NULL,
+  `RZ_SOCIAL` varchar(150) DEFAULT NULL,
+  `DS_CNPJ` varchar(20) DEFAULT NULL,
+  `NM_TELEFONE` varchar(20) NOT NULL,
+  `DS_CEP` varchar(10) DEFAULT NULL,
+  `DS_EMAIL` varchar(100) NOT NULL,
+  `DS_RUA` varchar(150) DEFAULT NULL,
+  `NR_CASA` varchar(10) DEFAULT NULL,
+  `NM_BAIRRO` varchar(100) DEFAULT NULL,
+  `NM_CIDADE` varchar(100) DEFAULT NULL,
+  `NM_ESTADO` varchar(50) DEFAULT NULL,
+  `DT_CRIACAO` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `DT_ATUALIZACAO` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID_IMOBILIARIA`),
+  UNIQUE KEY `DS_EMAIL` (`DS_EMAIL`),
+  UNIQUE KEY `DS_CNPJ` (`DS_CNPJ`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- =============================================
+-- Tabela: permissoes
+-- =============================================
+CREATE TABLE `permissoes` (
+  `ID_PERMISSAO` int NOT NULL AUTO_INCREMENT,
+  `NM_PERMISSAO` varchar(50) NOT NULL,
+  `DS_PERMISSAO` varchar(100) DEFAULT NULL,
+  `DT_CRIACAO` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID_PERMISSAO`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- =============================================
+-- Tabela: usuarios
+-- =============================================
+CREATE TABLE `usuarios` (
+  `ID_USUARIO` int NOT NULL AUTO_INCREMENT,
+  `NM_USUARIO` varchar(100) DEFAULT NULL,
+  `DT_NASCIMENTO` date DEFAULT NULL,
+  `DS_USUARIO` varchar(30) NOT NULL,
+  `DS_EMAIL` varchar(100) NOT NULL,
+  `DS_GENERO` varchar(20) NOT NULL,
+  `TP_PERMISSAO` int DEFAULT NULL,
+  PRIMARY KEY (`ID_USUARIO`),
+  UNIQUE KEY `DS_EMAIL` (`DS_EMAIL`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- =============================================
+-- Tabela: imoveis
+-- =============================================
+CREATE TABLE `imoveis` (
+  `ID_IMOVEL` int NOT NULL AUTO_INCREMENT,
+  `ID_IMOBILIARIA` int NOT NULL,
+  `TP_IMOVEL` enum('CASA','APARTAMENTO','TERRENO','COMERCIAL') NOT NULL,
+  `VR_IMOVEL` decimal(12,2) NOT NULL,
+  `DS_TEXTO` text,
+  `DS_CEP_IMOVEL` varchar(10) DEFAULT NULL,
+  `NM_IMOVEL` varchar(20) DEFAULT NULL,
+  `DS_BAIRRO_IMOVEL` varchar(100) DEFAULT NULL,
+  `DS_CIDADE_IMOVEL` varchar(100) DEFAULT NULL,
+  `DS_ESTADO_IMOVEL` varchar(50) DEFAULT NULL,
+  `STATUS_IMOVEL` enum('DISPONIVEL','VENDIDO','ALUGADO') DEFAULT 'DISPONIVEL',
+  `DT_CRIACAO` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID_IMOVEL`),
+  KEY `ID_IMOBILIARIA` (`ID_IMOBILIARIA`),
+  CONSTRAINT `imoveis_ibfk_1` FOREIGN KEY (`ID_IMOBILIARIA`) REFERENCES `imobiliarias` (`ID_IMOBILIARIA`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- =============================================
+-- Tabela: vendas
+-- =============================================
+CREATE TABLE `vendas` (
+  `ID_VENDA` int NOT NULL AUTO_INCREMENT,
+  `ID_USUARIO` int NOT NULL,
+  `ID_IMOVEL` int NOT NULL,
+  `VR_IMOVEL` decimal(12,2) NOT NULL,
+  `VR_COMISSAO` decimal(10,2) DEFAULT NULL,
+  `DT_VENDA` date NOT NULL,
+  `DS_STATUS` enum('PENDENTE','CONCLUIDA','CANCELADA') DEFAULT 'PENDENTE',
+  PRIMARY KEY (`ID_VENDA`),
+  KEY `ID_USUARIO` (`ID_USUARIO`),
+  KEY `ID_IMOVEL` (`ID_IMOVEL`),
+  CONSTRAINT `vendas_ibfk_1` FOREIGN KEY (`ID_USUARIO`) REFERENCES `usuarios` (`ID_USUARIO`),
+  CONSTRAINT `vendas_ibfk_2` FOREIGN KEY (`ID_IMOVEL`) REFERENCES `imoveis` (`ID_IMOVEL`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- FIM DA 1º VERSÃO DO BANCO DE DADOS
