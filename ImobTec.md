@@ -1,59 +1,53 @@
-PLANO DE NEGÓCIO – IMOBTEC 
+Escopo – IMOBTEC
 
-Resumo Executivo 
+Resumo Executivo
 
-  Nome da startup: IMOBTEC 
+Nome da startup: IMOBTEC
 
- Missão: Criar uma plataforma fácil e moderna para ajudar qualquer pessoa a vender, comprar ou alugar imóveis sem complicação. 
+Missão: Desenvolver uma plataforma moderna, intuitiva e acessível que facilite a compra, venda e locação de imóveis, eliminando burocracias e tornando o processo mais ágil para todos os usuários.
 
- Visão: Ser uma das principais plataformas imobiliárias do Brasil, conhecida pela tecnologia e pela praticidade que oferece para usuários comuns, imobiliárias e construtoras. 
+Visão: Tornar-se uma das principais plataformas imobiliárias do Brasil, reconhecida pela inovação tecnológica, praticidade e eficiência no atendimento a usuários, imobiliárias e construtoras.
 
-  Problema que resolve: 
+Problemas que resolve:
 
- Encontrar um imóvel do jeito que a pessoa quer ainda é algo demorado e cheio de sites confusos. 
+A busca por imóveis ainda é um processo demorado e, muitas vezes, confuso devido à baixa usabilidade de diversos sites disponíveis.
 
-  Quem quer anunciar normalmente precisa passar por processos muito burocráticos. 
+O processo de anúncio de imóveis costuma ser burocrático, especialmente para pessoas físicas.
 
- Construtoras e imobiliárias nem sempre têm um lugar organizado para mostrar seus lançamentos e imóveis disponíveis. 
+Imobiliárias e construtoras nem sempre possuem uma plataforma centralizada e organizada para apresentar seus imóveis e lançamentos.
 
-  Pequenos anunciantes têm pouca visibilidade. 
+Pequenos anunciantes enfrentam dificuldades para obter visibilidade no mercado.
 
-  Solução oferecida: 
+Solução oferecida:
 
- Um sistema completo com mapa interativo, filtros avançados e anúncios simples, onde tanto usuários comuns quanto empresas do setor podem publicar e visualizar imóveis de forma rápida. 
+A IMOBTEC propõe um sistema completo que integra mapa interativo, filtros avançados e um processo simplificado de publicação de anúncios. A plataforma permite que tanto usuários comuns quanto empresas do setor imobiliário anunciem e encontrem imóveis de forma rápida, prática e visual.
 
- 
+Descrição da Empresa
 
- 
+Produto/serviço principal:
 
-Descrição da Empresa 
+Plataforma digital que possibilita a busca e o anúncio de imóveis por meio de um mapa interativo, aliado a filtros inteligentes que tornam a navegação mais eficiente. O sistema é acessível tanto para pessoas físicas quanto para imobiliárias e construtoras.
 
-  Produto/serviço principal: 
+Modelo de negócio (geração de receita):
 
-Uma plataforma online que permite anunciar e procurar imóveis usando um mapa 
+Assinaturas mensais para imobiliárias e construtoras utilizarem funcionalidades avançadas.
 
-interativo e diversos filtros. Tanto usuários comuns quanto imobiliárias e construtoras podem usar. 
+Cobrança para destaque de anúncios realizados por pessoas físicas.
 
-  Modelo de negócio (como gera receita): 
+Inserção de publicidade dentro da plataforma, de forma não invasiva.
 
-  Assinaturas para imobiliárias e construtoras. 
+Possibilidade futura de cobrança de comissão sobre negociações realizadas pela plataforma.
 
- Pagamento para destacar anúncios de pessoas físicas. 
+Comercialização de dados estatísticos do mercado imobiliário, garantindo a privacidade dos usuários.
 
-  Publicidade dentro do sistema (sem ser chata ou invasiva). 
+Diferenciais competitivos:
 
-  Possível comissão em negociações futuras, caso implementado. 
+Uso de mapa interativo que proporciona uma experiência mais visual e intuitiva na busca por imóveis.
 
-  Venda de dados gerais do mercado (sem expor informações pessoais). 
+Facilidade de uso, permitindo que qualquer pessoa anuncie sem complicações.
 
- Diferenciais competitivos: 
+Possibilidade de construtoras divulgarem empreendimentos futuros diretamente no mapa.
 
-  O mapa interativo deixa tudo mais visual e fácil de entender.  Qualquer pessoa consegue anunciar sem dificuldade. 
+Filtros avançados que tornam a busca mais rápida, precisa e personalizada.
 
-  Construtoras podem mostrar futuros empreendimentos direto no mapa. 
-
-  Filtros super completos para a busca ficar mais rápida e precisa. 
-
- Plataforma pensada para pessoas físicas e grandes empresas ao mesmo tempo, algo que não é muito comum nos concorrentes. 
-
- 
+Plataforma pensada para atender simultaneamente pessoas físicas e empresas, criando um ambiente mais completo e competitivo em relação aos concorrentes.

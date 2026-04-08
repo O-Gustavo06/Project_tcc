@@ -1,0 +1,39 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "css.lint.propertyIgnoredDueToDisplay": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore",
+  "files.exclude": {
+    "**/.git": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/vendor": true,
+    "**/src/frontend/ImobTec.Web/node_modules": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/bootstrap/cache/*.php": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/public/build": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/framework/cache": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/framework/sessions": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/framework/testing": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/framework/views": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/logs": true
+  },
+  "search.exclude": {
+    "**/src/backend/ImobTec.API/imobtec-laravel/vendor/**": true,
+    "**/src/frontend/ImobTec.Web/node_modules/**": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/public/build/**": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/framework/**": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/logs/**": true
+  },
+  "files.watcherExclude": {
+    "**/src/frontend/ImobTec.Web/node_modules/**": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/public/build/**": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/framework/**": true,
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/logs/**": true
+  },
+  "intelephense.environment.includePaths": [
+    "c:/xampp/htdocs/Project.tcc/src/backend/ImobTec.API/imobtec-laravel/vendor",
+    "c:/xampp/htdocs/Project.tcc/src/backend/ImobTec.API/imobtec-laravel/vendor/laravel/framework/src"
+  ],
+  "intelephense.files.exclude": [
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/framework/**",
+    "**/src/backend/ImobTec.API/imobtec-laravel/storage/logs/**"
+  ]
+}
