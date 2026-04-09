@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StoreImobiliariaRequest extends FormRequest
 {
-    public function authorize(): bool
+    public function authorize(): boolco
     {
         return true;
     }
